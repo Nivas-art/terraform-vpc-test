@@ -152,7 +152,7 @@ resource "aws_route" "r" {
   nat_gateway_id = aws_nat_gateway.nat.id
 }
 
-##adding database-routes to igw ##
+##adding database-routes to NAT ##
 resource "aws_route" "routed" {
   route_table_id            = aws_route_table.database.id
   destination_cidr_block    = "0.0.0.0/0"
